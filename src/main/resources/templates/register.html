@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinX - Register</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}">
+    <script th:src="@{/js/register.js}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>SpinX Laundry Management</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-box">
+            <h2>Register</h2>
+            <form method="post" th:action="@{/register}" onsubmit="return validatePasswords()">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="text" name="enroll" placeholder="Enrollment Number" required>
+                <input type="text" name="room" placeholder="Room Number" required>
+                <input type="email" name="email" placeholder="College Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                <p id="error" style="color:red; font-size: 14px; display: none;">Passwords do not match.</p>
+                <a class="sigin" href="/login" style="padding: 10px 5px; color: #d40000; font-weight: bold;">Sign in here</a>
+                <button type="submit">Register</button>
+            </form>
+        </div>        
+    </main>
+</body>
+</html>

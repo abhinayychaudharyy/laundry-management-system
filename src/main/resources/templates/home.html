@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinX - Landing</title>
+    <link rel="stylesheet" th:href="@{/css/landing.css}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to SpinX</h1>
+        <p>Your laundry, our priority.</p>
+        <nav>
+            <a>About</a>
+        </nav>
+    </header>
+
+    <div class="about">
+        <p>SpinX is a powerful and efficient laundry management system built for Bennett University students and admins. Manage laundry bags, track orders, and stay updated—seamlessly.</p>
+    </div>
+
+    <section class="cta">
+        <button onclick="location.href='/register'">Register</button>
+        <button onclick="location.href='/login'">Login</button>
+    </section>
+
+</body>
+</html>

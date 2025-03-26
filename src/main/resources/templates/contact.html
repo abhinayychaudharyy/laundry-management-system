@@ -1,50 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bennett University Laundry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #d50000;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-        }
-        .btn {
-            background-color: #d50000;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .btn:hover {
-            background-color: #a00000;
-        }
-    </style>
+    <title>SpinX - Contact Us</title>
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
 </head>
 <body>
     <header>
-        <h1>Bennett University Laundry Management</h1>
+        <h1>SpinX Laundry Management</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="contact">Contact</a>
+        </nav>
     </header>
-    <div class="container">
-        <h2>Welcome to the Laundry Service</h2>
-        <p>Submit your unique laundry bag with up to 10 items and collect it after 3 working days.</p>
-        <button class="btn">Login / Sign Up</button>
-    </div>
+
+    <main>
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <form method="post" th:action="@{/contact}">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
